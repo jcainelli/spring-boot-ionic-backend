@@ -31,6 +31,11 @@ public class ItemPedido implements Serializable {
 		this.preco = preco;
 	}
 
+	// utilizar o nome do método com get para ser serializado pelo json
+	public double getSubTotal() {
+		return (preco - desconto) * quantidade;
+	}
+	
 	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
