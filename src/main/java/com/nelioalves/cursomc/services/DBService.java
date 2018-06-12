@@ -33,7 +33,6 @@ import com.nelioalves.cursomc.repositories.PagamentoRepository;
 import com.nelioalves.cursomc.repositories.PedidoRepository;
 import com.nelioalves.cursomc.repositories.ProdutoRepository;
 
-
 @Service
 public class DBService {
 
@@ -159,7 +158,7 @@ public class DBService {
 		p3.getItens().addAll(Arrays.asList(ip2));
 
 		itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3));
-		
+
 		return true;
 	}
 }
